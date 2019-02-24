@@ -7,7 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./game-form.component.scss']
 })
 export class GameFormComponent {
-  addressForm = this.fb.group({
+  gameForm = this.fb.group({
     company: null,
     firstName: [null, Validators.required],
     lastName: [null, Validators.required],

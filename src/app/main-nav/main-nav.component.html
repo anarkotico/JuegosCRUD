@@ -1,5 +1,8 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+  <mat-sidenav #drawer 
+      class="sidenav"
+      [ngClass]="{hidden: !(isHandset$ | async)}"
+      fixedInViewport="true"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
@@ -21,8 +24,16 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>CRUD-Games</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-    <ng-content></ng-content>
+      <span class="spacer"></span>
+
+      <a [routerLink]="['/games']">Listado</a>
+      <a [routerLink]="['/game-add']" *ngIf="false">Nuevo</a>
+      <span class="spacer"></span>
+      <a mat-raised-button color="primary" [routerLink]="['/']">login1</a>
+      <a mat-raised-button color="primary" [routerLink]="['/']">signup</a>
+      <a mat-raised-button color="primary" [routerLink]="['/game-form']">game-form</a>
+
+      </mat-toolbar>
+  <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>

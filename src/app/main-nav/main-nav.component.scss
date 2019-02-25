@@ -1,7 +1,19 @@
 .sidenav-container {
   height: 100%;
 }
+.hidden {
+  display:none
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.mat-toolbar a {
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
 
+}
 .sidenav {
   width: 200px;
 }

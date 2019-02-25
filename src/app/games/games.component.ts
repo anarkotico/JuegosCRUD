@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Game } from '../game';
+import { Game } from '../model/game';
 
 @Component({
   selector: 'app-games',
@@ -10,7 +10,7 @@ import { Game } from '../game';
 export class GamesComponent implements OnInit {
 
   displayedColumns: string[] = ['titulo', 'anyo','fabricante','descripcion'];
-  data: Object[] = [];
+  data: Game[] = [];
   isLoadingResults = true;
 
   constructor(private api: ApiService) { }

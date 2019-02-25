@@ -14,6 +14,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule, MatToolbarModule, MatSidenavModule, MatListModule, MatSelectModule, MatRadioModule } from "@angular/material";
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { GamesComponent } from './games/games.component';
@@ -23,6 +24,7 @@ import { GameEditComponent } from './game-edit/game-edit.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { GameFormComponent } from './game-form/game-form.component';
+import { GameGalComponent } from './game-gal/game-gal.component';
 // import { GameTableComponent } from './game-table/game-table.component';
 
 @NgModule({
@@ -33,7 +35,8 @@ import { GameFormComponent } from './game-form/game-form.component';
     GameAddComponent,
     GameEditComponent,
     MainNavComponent,
-    GameFormComponent
+    GameFormComponent,
+    GameGalComponent
     // GameTableComponent
   ],
   imports: [
@@ -42,6 +45,7 @@ import { GameFormComponent } from './game-form/game-form.component';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatTableModule,

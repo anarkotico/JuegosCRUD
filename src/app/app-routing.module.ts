@@ -6,12 +6,17 @@ import { GameDetailComponent } from './game-detail/game-detail.component';
 import { GameFormComponent } from './game-form/game-form.component';
 import { GameEditComponent } from './game-edit/game-edit.component';
 import { GameAddComponent } from './game-add/game-add.component';
+import { GameGalComponent } from './game-gal/game-gal.component';
 
 const routes: Routes = [
-  {
-    path: 'games',
+  { path: 'games',
     component: GamesComponent,
     data: { title: 'List of Games' }
+  },
+  {
+    path: 'game-gal',
+    component: GameGalComponent,
+    data: { title: 'List of GameCards' }
   }  ,
   // {
   //   path: 'gametable',

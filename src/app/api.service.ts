@@ -15,9 +15,9 @@ apiUrl = apiBase+"games/";
   providedIn: 'root'
 })
 export class ApiService {
-
+  user: User=null;
   constructor(private http: HttpClient) { }
-
+ 
   getGames (): Observable<Game[]> {
     return this.http.get<Game[]>(apiUrl)
       .pipe(

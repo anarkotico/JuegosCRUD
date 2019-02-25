@@ -18,11 +18,11 @@ const routes: Routes = [
   //   component: GameTableComponent,
   //   data: { title: 'List of Games' }
   // }  ,
-  // {
-  //   path: 'game-details/:id',
-  //   component: GameDetailComponent,
-  //   data: { title: 'Game Details' }
-  // },
+  {
+    path: 'game-details/:id',
+    component: GameDetailComponent,
+    data: { title: 'Game Details' }
+  },
   {
     path: 'game-add',
     component: GameAddComponent,

@@ -17,7 +17,7 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { GamesComponent } from './games/games.component';
-// import { GameDetailComponent } from './game-detail/game-detail.component';
+import { GameDetailComponent } from './game-detail/game-detail.component';
 import { GameAddComponent } from './game-add/game-add.component';
 import { GameEditComponent } from './game-edit/game-edit.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -29,7 +29,7 @@ import { GameFormComponent } from './game-form/game-form.component';
   declarations: [
     AppComponent,
     GamesComponent,
-    // GameDetailComponent,
+    GameDetailComponent,
     GameAddComponent,
     GameEditComponent,
     MainNavComponent,

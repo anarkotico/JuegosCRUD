@@ -38,7 +38,8 @@
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/game-details/', 'row._id']"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowClicked(row)"></tr>
     </table>
   </div>
 </div>
+(click)="onRowClicked(row)">

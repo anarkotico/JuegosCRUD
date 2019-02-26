@@ -22,11 +22,13 @@ export class GameDetailComponent implements OnInit {
      this.game.anyo=null;
      this.game.rating=null;
      this.game.descripcion='';
-   
+    alert(this.route.snapshot.params['_id']);
     console.log(this.route.snapshot.params['_id']);
     this.getGameDetails(this.route.snapshot.params['_id']);
   }
-
+  onRowClicked(row) {
+    console.log('Row clicked: '+ row._id);
+}
   getGameDetails(id) {
     this.api.getGame(id)
       .subscribe(data => {
@@ -49,4 +51,4 @@ export class GameDetailComponent implements OnInit {
       );
   }
 
-}
+ }

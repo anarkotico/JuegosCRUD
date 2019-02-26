@@ -9,7 +9,7 @@ import { Game } from '../model/game';
 })
 export class GamesComponent implements OnInit {
 
-  displayedColumns: string[] = ['titulo', 'anyo','fabricante','descripcion'];
+  displayedColumns: string[] = ['_id','titulo', 'anyo','fabricante','descripcion'];
   data: Game[] = [];
   isLoadingResults = true;
 

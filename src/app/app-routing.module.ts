@@ -40,11 +40,11 @@ const routes: Routes = [
     // component: GameAddComponent,
     data: { title: 'Add Game' }
   },
-  // {
-  //   path: 'game-edit/:id',
-  //   component: GameEditComponent,
-  //   data: { title: 'Edit Game' }
-  // },
+  {
+    path: 'game-edit/:id',
+    component: GameEditComponent,
+    data: { title: 'Edit Game' }
+  },
   { path: '',
     redirectTo: '/games',
     pathMatch: 'full'

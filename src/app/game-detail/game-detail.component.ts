@@ -10,25 +10,23 @@ import { Game } from '../model/game';
 })
 export class GameDetailComponent implements OnInit {
 
-  game: Game;
+  game: Game=
+    { _id: '', titulo:'', descripcion:'',
+                portada: '', updated_at:null, anyo:null,
+                fabricante:'', genero:'', rating:null
+              };
   isLoadingResults = true;
 
   constructor(private route: ActivatedRoute, private api: ApiService, private router: Router) { }
 
   ngOnInit() {
-     this.game._id='';
-     this.game.titulo='';
-     this.game.fabricante='';
-     this.game.anyo=null;
-     this.game.rating=null;
-     this.game.descripcion='';
-    console.log(this.route.snapshot.params['_id']);
-    this.getGameDetails(this.route.snapshot.params['_id']);
+    this.getGameDetails('_id');
   }
-  onRowClicked(row) {
-    console.log('Row clicked: '+ row._id);
-}
+//   onRowClicked(row) {
+//     console.log('Row clicked: '+ row._id);
+// }
   getGameDetails(id) {
+    console.log(id);
     this.api.getGame(id)
       .subscribe(data => {
         this.game = data;

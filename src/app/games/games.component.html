@@ -4,7 +4,7 @@
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
   <div class="button-row">
-     <a mat-flat-button color="primary" [routerLink]="['/game-add']"><mat-icon>add</mat-icon></a> 
+     <a mat-flat-button color="primary" routerLink="['/game-add']"><mat-icon>add</mat-icon></a> 
   </div>
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="data" class="example-table"
@@ -38,8 +38,7 @@
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowClicked(row)"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['game-details/', row._id]"></tr>
     </table>
   </div>
 </div>
-(click)="onRowClicked(row)">

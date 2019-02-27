@@ -26,12 +26,12 @@
       <span>CRUD-Games</span>
       <span class="spacer"></span>
 
-      <a [routerLink]="['/games']">Listado</a>
-      <a [routerLink]="['/game-add']" *ngIf="false">Nuevo</a>
+      <a [routerLink]="['games']">Listado</a>
+      <a [routerLink]="['game-add']" *ngIf="false">Nuevo</a>
       <span class="spacer"></span>
       <a mat-raised-button color="primary" [routerLink]="['/']">login</a>
       <a mat-raised-button color="primary" [routerLink]="['/']">signup</a>
-      <a mat-raised-button color="primary" [routerLink]="['/game-form']">game-form</a>
+      <a mat-raised-button color="primary" [routerLink]="['game-form']">game-form</a>
 
       </mat-toolbar>
   <ng-content></ng-content>

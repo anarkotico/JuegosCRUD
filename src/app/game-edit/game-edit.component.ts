@@ -14,15 +14,20 @@ export class GameEditComponent implements OnInit {
   _id:string='';
   titulo:string='';
   descripcion:string='';
+  portada:string='';
+  genero:string='';
   anyo:number=null;
   isLoadingResults = false;
 
   constructor(private router: Router, private route: ActivatedRoute, private api: ApiService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.getGame(this.route.snapshot.params['id']);
+    this.getGame(this.route.snapshot.params['_id']);
     this.gameForm = this.formBuilder.group({
       'titulo' : [null, Validators.required],
+      'descripcion' : [null, Validators.required],
+      'fabricante' : [null, Validators.required],
+      'portada' : [null, Validators.required],
       'descripcion' : [null, Validators.required],
       'anyo' : [null, Validators.required]
     });
@@ -45,7 +50,7 @@ export class GameEditComponent implements OnInit {
       .subscribe(res => {
           let id = res['_id'];
           this.isLoadingResults = false;
-          this.router.navigate(['/game-details', id]);
+          this.router.navigate(['/game-details'], id]);
         }, (err) => {
           console.log(err);
           this.isLoadingResults = false;
@@ -54,7 +59,7 @@ export class GameEditComponent implements OnInit {
   }
 
   gameDetails() {
-    this.router.navigate(['/game-details', this._id]);
+    this.router.navigate(['game-details'], this._id]);
   }
 
 }

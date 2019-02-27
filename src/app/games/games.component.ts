@@ -14,7 +14,9 @@ export class GamesComponent implements OnInit {
   isLoadingResults = true;
 
   constructor(private api: ApiService) { }
-
+  add(){
+    
+  }
   ngOnInit() {
     this.api.getGames()
       .subscribe(res => {

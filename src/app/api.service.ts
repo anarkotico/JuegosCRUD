@@ -26,7 +26,7 @@ export class ApiService {
       );
   }
 
-  getGame(id: number): Observable<Game> {
+  getGame(id: string): Observable<Game> {
     const url = `${apiUrl}/${id}`;
     return this.http.get<Game>(url).pipe(
       tap(_ => console.log(`fetched game id=${id}`)),
